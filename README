@@ -1,0 +1,8 @@
+#-- Monitoring db2 z pohledu aplikaci prostrednictvim utility db2top
+#-- Skripty a definice pro:
+#--   run_db2top.sh --  spusteni monitorovani - utility db2top a ukladani namerenych udaju do souboru a jejich rotace
+#--   db2top2es_ng.pl --  import namerenych udaju do elastic indexu
+#--   index-mapping-db2top.json --   definice indexhu pro ulozeni namerenych udaju
+#--   job-definition.json --  definice rollup jobu pro sumaricase namerenych udaju dle "DB_User"
+#--   export.ndjson --  definice dashboardu vcetne prisluznych view
+#--   README.txt  -- this file
