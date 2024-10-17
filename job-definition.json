@@ -1,0 +1,178 @@
+{
+  "config": {
+    "id": "sum-by-user-001",
+    "index_pattern": "db2top",
+    "rollup_index": "usr_db2top",
+    "cron": "0 5,15,25,35,45,55 * * * ?",
+    "groups": {
+      "date_histogram": {
+        "calendar_interval": "1s",
+        "field": "@timestamp",
+        "delay": "20m",
+        "time_zone": "Europe/Prague"
+      },
+      "terms": {
+        "fields": [
+          "DB_User.keyword"
+        ]
+      }
+    },
+    "metrics": [
+      {
+        "field": "Delta_IOReads",
+        "metrics": [
+          "sum"
+        ]
+      },
+      {
+        "field": "Delta_IOWrites",
+        "metrics": [
+          "sum"
+        ]
+      },
+      {
+        "field": "Delta_RowsRead",
+        "metrics": [
+          "sum"
+        ]
+      },
+      {
+        "field": "Delta_RowsSelect",
+        "metrics": [
+          "sum"
+        ]
+      },
+      {
+        "field": "Delta_RowsWritten",
+        "metrics": [
+          "sum"
+        ]
+      },
+      {
+        "field": "Dynamic_SQL",
+        "metrics": [
+          "sum"
+        ]
+      },
+      {
+        "field": "Fetch_Count",
+        "metrics": [
+          "sum"
+        ]
+      },
+      {
+        "field": "IO_perc",
+        "metrics": [
+          "sum"
+        ]
+      },
+      {
+        "field": "Locks_Held",
+        "metrics": [
+          "sum"
+        ]
+      },
+      {
+        "field": "Lockwait_",
+        "metrics": [
+          "sum"
+        ]
+      },
+      {
+        "field": "Log_Used",
+        "metrics": [
+          "sum"
+        ]
+      },
+      {
+        "field": "Max Cost_Estimate",
+        "metrics": [
+          "sum"
+        ]
+      },
+      {
+        "field": "Mem_perc",
+        "metrics": [
+          "sum"
+        ]
+      },
+      {
+        "field": "num_of_XQueries",
+        "metrics": [
+          "sum"
+        ]
+      },
+      {
+        "field": "Session_Cpu",
+        "metrics": [
+          "sum"
+        ]
+      },
+      {
+        "field": "Sess_Memory",
+        "metrics": [
+          "sum"
+        ]
+      },
+      {
+        "field": "Sorts_",
+        "metrics": [
+          "sum"
+        ]
+      },
+      {
+        "field": "Sorts_Overflows",
+        "metrics": [
+          "sum"
+        ]
+      },
+      {
+        "field": "Statement_Cpu",
+        "metrics": [
+          "sum"
+        ]
+      },
+      {
+        "field": "Static_SQL",
+        "metrics": [
+          "sum"
+        ]
+      },
+      {
+        "field": "Time_InStatus",
+        "metrics": [
+          "sum"
+        ]
+      },
+      {
+        "field": "Recent_Cpu",
+        "metrics": [
+          "sum"
+        ]
+      }
+    ],
+    "timeout": "20s",
+    "page_size": 1000
+  },
+  "status": {
+    "job_state": "started",
+    "current_position": {
+      "@timestamp.date_histogram": 1675073287000,
+      "DB_User.keyword.terms": "UFHDBA04"
+    }
+  },
+  "stats": {
+    "pages_processed": 1267,
+    "documents_processed": 616659,
+    "rollups_indexed": 72354,
+    "trigger_count": 1190,
+    "index_time_in_ms": 49101,
+    "index_total": 77,
+    "index_failures": 0,
+    "search_time_in_ms": 73872,
+    "search_total": 1267,
+    "search_failures": 0,
+    "processing_time_in_ms": 4651,
+    "processing_total": 1267
+  }
+}
