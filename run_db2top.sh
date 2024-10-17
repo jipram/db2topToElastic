@@ -1,8 +1,9 @@
 #!/usr/bin/ksh
 
-PRUNE=12
+PRUNE=200
 I=1
-
+DB_NAME='FH0131AB'
+DATA_PATH='/ap/fh/fhdba01/ufhdba01/jip/db2top/data'
 
 
 set -x
@@ -10,12 +11,12 @@ set -x
 while [ true ]
 do
   export tmstmp=`date +"%Y-%m-%d-%H"`
-  db2top -d fh0431ab -i 5 -b l -o db2top-${tmstmp}.out -m 60
-  gzip db2top-${tmstmp}.out
+  db2top -d $DB_NAME -i 5 -b l -o $DATA_PATH/${DB_NAME}_db2top-${tmstmp}.out -m 60
+  gzip $DATA_PATH/${DB_NAME}_db2top-${tmstmp}.out
 
 
   I=1
-  ls -1 db2top-????-??-??-??.out.gz| sort -r | while read FNAME
+  ls -1 $DATA_PATH/${DB_NAME}_db2top-????-??-??-??.out.gz| sort -r | while read FNAME
   do
     echo "FNAME je: $FNAME"
     if [[ $PRUNE -lt $I ]]
@@ -28,7 +29,6 @@ do
   done
 done
 
-#db2top -d fh0431ab -b l -o db2top-l.out -m 2
-
-
-
+I=$(($I + 1))
+  done
+done
