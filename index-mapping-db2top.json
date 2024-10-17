@@ -1,0 +1,203 @@
+{
+  "db2top": {
+    "mappings": {
+      "properties": {
+        "@timestamp": {
+          "type": "date"
+        },
+        "Application_Handle": {
+          "type": "long"
+        },
+        "Application_Name": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Application_Status": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Assoc_Agents": {
+          "type": "long"
+        },
+        "Client_NetName": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Client_Pid": {
+          "type": "long"
+        },
+        "Client_Platform": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Cpu_perc": {
+          "type": "half_float"
+        },
+        "DB_User": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Delta_IOReads": {
+          "type": "long"
+        },
+        "Delta_IOWrites": {
+          "type": "long"
+        },
+        "Delta_RowsRead": {
+          "type": "long"
+        },
+        "Delta_RowsSelect": {
+          "type": "long"
+        },
+        "Delta_RowsWritten": {
+          "type": "long"
+        },
+        "Delta_TQr": {
+          "type": "long"
+        },
+        "Dynamic_SQL": {
+          "type": "long"
+        },
+        "Fetch_Count": {
+          "type": "long"
+        },
+        "Hash Join_Overflows": {
+          "type": "long"
+        },
+        "IO_perc": {
+          "type": "half_float"
+        },
+        "IoType": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Last_Operation": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Locks_Held": {
+          "type": "long"
+        },
+        "Lockwait_": {
+          "type": "long"
+        },
+        "Log_Used": {
+          "type": "long"
+        },
+        "Max Cost_Estimate": {
+          "type": "long"
+        },
+        "Mem_perc": {
+          "type": "half_float"
+        },
+        "Node_Number": {
+          "type": "short"
+        },
+        "Os_User": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "Paral_Degree": {
+          "type": "long"
+        },
+        "Recent_Cpu": {
+          "type": "half_float"
+        },
+        "Sess_Memory": {
+          "type": "long"
+        },
+        "Session_Cpu": {
+          "type": "half_float"
+        },
+        "Sorts_": {
+          "type": "long"
+        },
+        "Sorts_Overflows": {
+          "type": "long"
+        },
+        "Statement_Cpu": {
+          "type": "float"
+        },
+        "Static_SQL": {
+          "type": "long"
+        },
+        "Status_ChTime": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        },
+        "TimeTo_Connect": {
+          "type": "float"
+        },
+        "Time_InStatus": {
+          "type": "long"
+        },
+        "Wkd_Id": {
+          "type": "long"
+        },
+        "cpu_perc": {
+          "type": "float"
+        },
+        "handle_id": {
+          "type": "long"
+        },
+        "num_of_XQueries": {
+          "type": "long"
+        },
+        "user": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword",
+              "ignore_above": 256
+            }
+          }
+        }
+      }
+    }
+  }
+}
